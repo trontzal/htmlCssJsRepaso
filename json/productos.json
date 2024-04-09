@@ -16,9 +16,24 @@
       "id": 14
     },
     {
-      "nombre": "Modificadoadsfasdfasd",
-      "precio": "1324",
+      "nombre": "A ver?",
+      "precio": 1324,
       "id": 15
+    },
+    {
+      "nombre": "esrgre",
+      "precio": 12,
+      "id": 16
+    },
+    {
+      "nombre": "Nuevo editado",
+      "precio": 12323,
+      "id": 17
+    },
+    {
+      "nombre": "decimal nuevo",
+      "precio": 1233.06,
+      "id": 18
     }
   ]
 }

@@ -10,6 +10,8 @@ function domCargado() {
     table = document.querySelector('table');
     tbody = document.querySelector('tbody');
 
+    form.addEventListener('submit', guardar);
+
     console.log("dom cargado");
     listado();
 }
@@ -43,5 +45,33 @@ async function formulario(id) {
     }else{
         form.reset();
     }
+}
+
+async function guardar(e){
+    e.preventDefault();
+
+    const producto = {nombre: form.nombre.value, precio: +form.precio.value};
+    if(form.id.value){
+        producto.id = +form.id.value;
+
+        await fetch(URL + "/" + producto.id, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(producto)
+        });
+    }else{
+        await fetch(URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(producto)
+        });
+    }
+    listado();
+    form.reset();
+
 }
 
