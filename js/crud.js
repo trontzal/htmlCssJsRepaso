@@ -4,9 +4,9 @@ const URL = "http://127.0.0.1:3001/productos";
 
 window.addEventListener('DOMContentLoaded', domCargado);
 
-let table, tbody;
+let table, tbody, form;
 function domCargado() {
-    // form = document.querySelector('form');
+    form = document.querySelector('form');
     table = document.querySelector('table');
     tbody = document.querySelector('tbody');
 
@@ -18,9 +18,6 @@ async function listado() {
     const response = await fetch(URL);
     const productos = await response.json();
 
-    console.log("listado");
-    console.log(productos);
-
     tbody.innerHTML = '';
 
     productos.forEach(p => {
@@ -29,8 +26,22 @@ async function listado() {
         <td>
             <a class="btn btn-sm btn-primary" href="javascript:formulario(${p.id})">Editar</a>
             <a class="btn btn-sm btn-danger" href="javascript:borrar(${p.id})">Borrar</a>
-        </td>`;
+        </td>
+        `;
         tbody.appendChild(tr);
     });
+}
+
+async function formulario(id) {
+    if(id){
+        const respuesta = await fetch(URL + "/" + id);
+        const p = await respuesta.json();
+
+        form.id.value = p.id;
+        form.nombre.value = p.nombre;
+        form.precio.value = p.precio;
+    }else{
+        form.reset();
+    }
 }
 

@@ -47,32 +47,35 @@
               </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td>1</td>
-                  <td>Sin server</td>
-                  <td>10.00</td>
-                  <td>
-                      <button class="btn btn-primary">Editar</button>
-                      <button class="btn btn-danger">Eliminar</button>
-                  </td>
-                  
-              </tr>
-              <tr>
-                  <td>2</td>
-                  <td>Solo front</td>
-                  <td>10.00</td>
-                  <td>
-                      <button class="btn btn-primary">Editar</button>
-                      <button class="btn btn-danger">Eliminar</button>
-                  </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="btn btn-primary" href="">Añadir</a></td>
-            </tr>
+            <tr>
+              <td>1</td>
+              <td>Sin server</td>
+              <td>10.00</td>
+              <td>
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+              </td>
+              
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>Solo front</td>
+              <td>10.00</td>
+              <td>
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-danger">Eliminar</button>
+              </td>
+          </tr>
+             
           </tbody>
+          <tfoot>
+             <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a class="btn btn-primary" href="javascript:formulario()">Añadir</a></td>
+            </tr>
+          </tfoot>
       </table>
       </div>
 
@@ -91,7 +94,7 @@
       </div>
       <div class="d-flex justify-content-between mb-2">
         <label for="precio" class="me-2">Precio</label>
-        <input type="text"  id="precio" placeholder="Precio" class="w-75">
+        <input type="number"  id="precio" placeholder="Precio" class="w-75">
         <!-- <div class="invalid-feedback">Por favor, rellena este campo</div> -->
       </div>
       <div>
