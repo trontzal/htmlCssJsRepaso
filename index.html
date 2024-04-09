@@ -10,7 +10,8 @@
     <script defer src="bootstrap/bootstrap.bundle.min.js"></script>
     <script defer src="js/crud.js"></script>
 </head>
-<body class="bg-body-tertiary container">
+<body>
+ 
     <nav class="navbar navbar-expand-lg bg-dark-subtle">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html">Html css js y bootstrap</a>
@@ -32,44 +33,74 @@
           </div>
         </div>
       </nav>
+    <main class="container">
+      <div id="listado">
+        <h2>Listado de productos</h2>
 
-      <table class="table table-secondary table-striped table-bordered mt-3">
-        <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Precio €</th>
-                <th scope="col">Opciones</th>
+        <table class="table table-secondary table-striped table-bordered mt-3">
+          <thead>
+              <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Precio €</th>
+                  <th scope="col">Opciones</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>Sin server</td>
+                  <td>10.00</td>
+                  <td>
+                      <button class="btn btn-primary">Editar</button>
+                      <button class="btn btn-danger">Eliminar</button>
+                  </td>
+                  
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>Solo front</td>
+                  <td>10.00</td>
+                  <td>
+                      <button class="btn btn-primary">Editar</button>
+                      <button class="btn btn-danger">Eliminar</button>
+                  </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a class="btn btn-primary" href="">Añadir</a></td>
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Producto 1</td>
-                <td>10.00</td>
-                <td>
-                    <button class="btn btn-primary">Editar</button>
-                    <button class="btn btn-danger">Eliminar</button>
-                </td>
-                
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Producto 2</td>
-                <td>10.00</td>
-                <td>
-                    <button class="btn btn-primary">Editar</button>
-                    <button class="btn btn-danger">Eliminar</button>
-                </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td><a class="btn btn-primary" href="">Añadir</a></td>
-          </tr>
-        </tbody>
-    </table>
+          </tbody>
+      </table>
+      </div>
+
+  <div id="formulario" class="container-fluid d-flex flex-column align-items-center">
+    <h2>Administrador</h2>
+
+    <form class="w-25">
+      <div class="d-flex justify-content-between mb-2">
+        <label for="id" class="me-2">ID</label>
+        <input type="text" readonly id="id" value="0" class="w-75"/>
+      </div>
+      <div class="d-flex justify-content-between mb-2">
+        <label for="nombre" class="me-2">Nombre</label>
+        <input type="text"  id="nombre" placeholder="Nombre" class="w-75">
+        <!-- <div class="invalid-feedback">Por favor, rellena este campo</div> -->
+      </div>
+      <div class="d-flex justify-content-between mb-2">
+        <label for="precio" class="me-2">Precio</label>
+        <input type="text"  id="precio" placeholder="Precio" class="w-75">
+        <!-- <div class="invalid-feedback">Por favor, rellena este campo</div> -->
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+    </form>
+
+  </div>
     
+</main>
 </body>
 </html>

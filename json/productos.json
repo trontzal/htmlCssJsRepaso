@@ -1,0 +1,24 @@
+{
+  "productos": [
+    {
+      "nombre": "Producto JSON 1",
+      "precio": 1234,
+      "id": 1
+    },
+    {
+      "nombre": "Producto JSON 2asdfasdfasdf",
+      "precio": "22.34",
+      "id": 13
+    },
+    {
+      "nombre": "Producto JSON 3",
+      "precio": "32.34",
+      "id": 14
+    },
+    {
+      "nombre": "Modificadoadsfasdfasd",
+      "precio": "1324",
+      "id": 15
+    }
+  ]
+}
